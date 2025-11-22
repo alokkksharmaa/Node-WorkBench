@@ -1,13 +1,9 @@
-const http = require('http');
+import http from 'http';
+import fs from 'fs';
 
 const myServer = http.createServer((req, res) => {
-  //Made web server
-
-
-  console.log("New Req Recieved");
-  res.end("Hello from Server");
-  res.end();  //Always Required , to terminate teh session 
-
-});
+  console.log("New requuest Recieved");
+  res.end("Hello From Server");
+})
 
 myServer.listen(8000, () => console.log("Server Started"));

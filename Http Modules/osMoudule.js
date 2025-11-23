@@ -1,4 +1,5 @@
-const Os = require('os');
+const Os  = require('os');
+
 
 console.log(Os.platform());
 console.log(Os.homedir());

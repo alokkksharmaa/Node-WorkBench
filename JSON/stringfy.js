@@ -8,7 +8,7 @@ fs.writeFile('data.json', '{"name":"Alok","age":21}', 'utf-8', err => {
   }
 
   fs.readFile('data.json', 'utf-8', (err, jsonData) => {
-    if (err) return console.error(err);
+    if (err) return (err);
 
     const obj = JSON.parse(jsonData);  // Json goes and to read teh data to convert it into { name: "Alok", age: 20 }
     obj.age += 1;  //increase age by +1

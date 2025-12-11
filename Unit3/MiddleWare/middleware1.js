@@ -1,6 +1,6 @@
 const express = require('express');
 const ex = express();
-const morgan =  require(morgan);9
+const morgan =  require(morgan);
 
 ex.use(express.json());
 

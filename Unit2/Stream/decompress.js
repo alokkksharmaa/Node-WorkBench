@@ -2,15 +2,15 @@ const fs = require('fs');            // Import Node's file system module (for re
 const zlib = require('zlib');        // Import zlib module (for compression & decompression)
 
 // Step 1: Create a readable stream from the compressed file (.gz)
-const readStream  = fs.createReadStream('input.txt.gz');  
+const readStream = fs.createReadStream('input.txt.gz');
 // This reads input.txt.gz in chunks instead of loading the whole file in memory.
 
 // Step 2: Create a Gunzip stream (this will decompress the data)
-const gunzipStream = zlib.createGunzip();  
+const gunzipStream = zlib.createGunzip();
 // This takes compressed data and decompresses it chunk-by-chunk.
 
 // Step 3: Create a writable stream for the output decompressed file
-const writeStream = fs.createWriteStream('output.txt');  
+const writeStream = fs.createWriteStream('output.txt');
 // Whatever gets decompressed will be saved into output.txt.
 
 // Step 4: Pipe everything together

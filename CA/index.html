@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>File Creator</title>
+</head>
+<body>
+    <h2>Enter Details</h2>
+
+    <form>
+
+        <label>Filename:</label>
+        <input type="text" name="filename" required>
+        <br><br>
+
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" required>
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <br><br>
+
+        <button formaction="/save" formmethod="POST">Save File</button>
+        <button formaction="/compress" formmethod="POST">Compress File</button>
+
+    </form>
+</body>
+</html>

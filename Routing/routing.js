@@ -1,7 +1,4 @@
-const router = require(router);
-
-const router = express.Router();
-
+import router from 'router';
 router.get("/", (req, res) => {
   res.send("User home");
 });

@@ -1,13 +1,22 @@
 import express from 'express';
+import { Socket } from 'node:dgram';
 import { createServer } from 'node:http';
+import { Server } from 'socket.io';
 
 const app = express();
 const server = createServer(app);
+const io = new Server(server);
 
-app.get('/', (req, res) => {
-  res.send("<h1>Hello From Server </h1>");
+// Socket.io
+io.on("connection", (socket) => {
+  console.log("Anew User Connected", socket.id);
 });
 
-server.listen(8000, () => {
-  console.log(`server is running at http://localhost:8000`);
+
+app.get('/', (req, res) => {
+  res.send("<h1> Hello World");
+});
+
+app.listen(3000, () => {
+  console.log(`server running at http://localhost:3000`);
 });

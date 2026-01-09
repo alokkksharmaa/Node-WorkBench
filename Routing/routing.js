@@ -1,15 +1,22 @@
-import router from 'router';
-router.get("/", (req, res) => {
-  res.send("User home");
+import express from 'express';
+
+const app = express();
+const PORT = 8000;
+
+
+app.get("/", (req, res) => {
+  res.send("User Home");
+  console.log("User Home");
 });
 
-router.get("/profile", (req, res) => {
-  res.send("User profile");
+app.get("/Profile", (req, res) => {
+  res.send("User Profile");
 });
 
-router.get("/profile/settings/security", (req, res) => {
-  res.send("User security settings");
+app.get("/dashboard", (req, res) => {
+  res.send("User DashBoard");
+})
+
+app.listen(PORT,  () => {
+  console.log(`App is running on http://localhost//${PORT}`);
 });
-
-export default router;
-

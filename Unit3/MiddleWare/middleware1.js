@@ -1,7 +1,6 @@
 const express = require('express');
 const ex = express();
-const morgan =  require(morgan);
-
+import morgan from 'morgan';
 ex.use(express.json());
 
 ex.get("/", (req, res) => {
@@ -17,8 +16,8 @@ ex.get("/", (req, res) => {
   });
 });
 
-function errhandling(error, req, res , next){
-  res.status(500).send("Try After Sometimes");  
+function errhandling(error, req, res, next) {
+  res.status(500).send("Try After Sometimes");
 }
 
 ex.get("/error", (req, res) => {

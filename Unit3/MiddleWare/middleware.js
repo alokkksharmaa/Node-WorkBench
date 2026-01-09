@@ -1,8 +1,8 @@
 import express from 'express';
 const ex = express();
 
-function ageCheck(req, res, next) {
-  if (req.query.age < 18) {
+async function ageCheck(req, res, next) {
+   if (req.query.age < 18) {
     res.send("You are not allowed to visit this site");
   }
   next();

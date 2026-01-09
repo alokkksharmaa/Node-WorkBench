@@ -1,4 +1,6 @@
-const cookieSession = require("cookie-session");
+import cookieParser from "cookie-parser";
+
+const ex = cookieParser();
 
 ex.get("/setcookie", (req, res) => {
   res.cookie();

@@ -23,18 +23,18 @@ const customer = mongoose.model('customer', customerSchema);
 
 // insert customers
 async function insertCustomers() {
-  try{
+  try {
     await customer.insertMany([
-      { name: 'Alice', email: 'alice@email.com', phone: '1111111111' },
-      { name: 'Bob', email: 'bob@email.com', phone: '2222222222' },
-      { name: 'Charlie', email: 'charlie@email.com', phone: '3333333333' }
+      { name: 'Alice', email: 'alice@email.com', phone: '8335635665' },
+      { name: 'Bob', email: 'bob@email.com', phone: '9875642315' },
+      { name: 'Charlie', email: 'charlie@email.com', phone: '6586457891' }
     ]);
 
     console.log("Customer Inserted Successfully");
   }
-  catch(err){
-    console.log("Error Inserting Customers", error.message);
-  }finally{
+  catch (err) {
+    console.log("Error Inserting Customers", err.message);
+  } finally {
     mongoose.connection.close();
   }
 }

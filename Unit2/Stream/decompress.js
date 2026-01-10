@@ -1,5 +1,5 @@
-const fs = require('fs');            // Import Node's file system module (for reading/writing files)
-const zlib = require('zlib');        // Import zlib module (for compression & decompression)
+const fs = require('fs');            
+const zlib = require('zlib');        
 
 // Step 1: Create a readable stream from the compressed file (.gz)
 const readStream = fs.createReadStream('input.txt.gz');

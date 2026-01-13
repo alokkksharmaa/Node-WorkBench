@@ -22,6 +22,7 @@ const BookSchema = new mongoose.Schema({
   },
 });
 
+// create model 
 const Library = mongoose.model('Library', BookSchema);
 
 // insert books

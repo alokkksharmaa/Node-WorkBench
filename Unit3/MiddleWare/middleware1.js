@@ -1,6 +1,5 @@
 const express = require('express');
 const ex = express();
-import morgan from 'morgan';
 ex.use(express.json());
 
 ex.get("/", (req, res) => {

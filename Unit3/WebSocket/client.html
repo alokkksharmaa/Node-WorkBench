@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webserver</title>
+  <title>Chat App</title>
 </head>
 
 <body>
+  <h2>Chat Client</h2>
   <script>
-    const socket = new WebSocket("ws://localhost:3000");
-    socket.onopen = () => {
-      console.log("Connected to Server");
-      socket.send("Hello Server");
-    };
-    socket.onmessage = (event) => {
-      console.log("From Server: ", event.data);
-      const elem = document.createElement('p');
-      elem.textContent = `message from the server: ${event.data}`;
-      document.body.appendChild(elem);
-    };
+    
+    const wss = new WebSocket("ws://localhost:3000");
+    wss.onmessage = e => console.log(e.data);
+
+
+    setTimeout(() => {
+      ws.send("Hello From client");
+    }, 1000);
   </script>
+
 </body>
 
 </html>

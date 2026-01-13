@@ -32,5 +32,4 @@ ex.get("/session", (req, res) => {
 
 ex.get("/deletesession", (req, res) => {
   req.session = null
-}
-)
+});

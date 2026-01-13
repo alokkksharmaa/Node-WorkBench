@@ -1,5 +1,5 @@
-const fs = require('fs');            // Loads Node's file system module
-const zlib = require('zlib');        // Loads zlib module for compression
+import fs from 'fs';
+import zlib from 'zlib';
 
 // Step 1: Create a file named input.txt and write "Alok" into it
 fs.writeFile('input.txt', 'Alok', 'utf-8', (err) => {

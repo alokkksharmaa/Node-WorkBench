@@ -1,7 +1,7 @@
-const fs = require('fs');
-const { console } = require('inspector');
+import fs from "fs";
 
-// fs.writeFileSync('file.txt', "Alok", { encoding: "utf-8" });
+
+fs.writeFileSync('file.txt', "Alok", { encoding: "utf-8" });
 
 fs.readFile('file.txt', 'utf-8', (err, data) => {
   if (err) {

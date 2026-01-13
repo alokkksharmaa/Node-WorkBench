@@ -1,11 +1,10 @@
-const fs = require('fs');            
-const zlib = require('zlib');        
+import fs from "fs";
+import zlib from "zlib";       
 
 // Step 1: Create a readable stream from the compressed file (.gz)
 const readStream = fs.createReadStream('input.txt.gz');
 // This reads input.txt.gz in chunks instead of loading the whole file in memory.
 
-// Step 2: Create a Gunzip stream (this will decompress the data)
 const gunzipStream = zlib.createGunzip();
 // This takes compressed data and decompresses it chunk-by-chunk.
 

@@ -9,6 +9,7 @@ fs.writeFile("file.txt", "hello", "utf-8", (err, data) => {
     console.log("File Created");
   }
 
+
   fs.readFile("file.txt", 'utf-8', (err, data) => {
     if (err) {
       console.log("Error reading file");
@@ -17,5 +18,8 @@ fs.writeFile("file.txt", "hello", "utf-8", (err, data) => {
     else {
       console.log(data);
     }
+
+
   });
+
 });

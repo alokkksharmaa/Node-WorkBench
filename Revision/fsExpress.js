@@ -5,7 +5,6 @@ import { readFile } from 'fs/promises';
 const app = express();
 const PORT = 3000;
 
-
 app.get("/" , async(req, res) => {
     try{
       const data = await readFile("data.txt", 'utf-8');
@@ -16,8 +15,6 @@ app.get("/" , async(req, res) => {
       res.status(500).send("Error reading file");
     }
 });
-
-
 
 
 app.listen(PORT, () => {

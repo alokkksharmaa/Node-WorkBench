@@ -25,3 +25,5 @@ async function run() {
   console.log(all.rows);
   
 }
+
+run();

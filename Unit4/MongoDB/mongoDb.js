@@ -29,16 +29,16 @@ const Library = mongoose.model('Library', BookSchema);
 async function insertBooks() {
   try {
     await Library.insertMany([
-      {bookname: "ZeroToOne", author:"xyz", serialNumber: 2134},
-      {bookname: "AtomicHabits", author:"abc", serialNumber: 2972},
-      {bookname: "Rich" , author: "sdj", serialNumber: 29387},
+      { bookname: "ZeroToOne", author: "xyz", serialNumber: 2134 },
+      { bookname: "AtomicHabits", author: "abc", serialNumber: 2972 },
+      { bookname: "Rich", author: "sdj", serialNumber: 29387 },
     ]);
     console.log("Books Inserted");
   }
-  catch(err){
+  catch (err) {
     console.log("Error inserting Boooks", err);
   }
-  finally{
+  finally {
     mongoose.connection.close();
   }
 }
